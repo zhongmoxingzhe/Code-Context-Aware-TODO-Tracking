@@ -4,8 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils import *
-#from BERT_model import TransformerModel1, Config, load_codeBERT
-from BERT_model import codeModel3, Config, load_codeBERT
+from BERT_model import TODO_Checker, Config, load_codeBERT
 from loss_func import Focal_loss, DiceLoss
 import re
 import numpy as np
