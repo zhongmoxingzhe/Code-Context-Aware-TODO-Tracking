@@ -129,7 +129,8 @@ if __name__ == '__main__':
     PYTHON_TGT_DIR = "./top_repos_10000/new_python/"
     dir_path = JAVA_TGT_DIR
     print(dir_path)
-    for epoch_id in range(4,7):
+    for epoch_id in range(1,6):
         test_model(dir_path, epoch_id, 'todo')
+
 
 
