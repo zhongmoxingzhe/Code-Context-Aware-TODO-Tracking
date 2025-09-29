@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils import *
-from BERT_model import codeModel4, Config
+from BERT_model import TODO_Checker, Config
 from codebert_train import Data_processor
 from loss_func import Focal_loss, DiceLoss
 
@@ -131,3 +131,4 @@ if __name__ == '__main__':
     print(dir_path)
     for epoch_id in range(4,7):
         test_model(dir_path, epoch_id, 'todo')
+
