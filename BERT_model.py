@@ -41,7 +41,7 @@ class Config(object):
 
 class TODO_Checker(nn.Module):
     def __init__(self, config):
-        super(TransformerModel1, self).__init__()
+        super(TODO_Checker, self).__init__()
 
         self.codebert1 = RobertaModel.from_pretrained(config.codebert_path)
         self.codebert2 = RobertaModel.from_pretrained(config.codebert_path)
@@ -109,5 +109,6 @@ class TODO_Checker(nn.Module):
 
         return output
         
+
 
 
