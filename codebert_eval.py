@@ -110,7 +110,7 @@ def test_model(dir_path, epoch_id, keyword):
     cal_auc(prob_result, dir_path)
     cal_ce(prob_result, dir_path)
     # todo
-    write_file('./output_dir/tdreminder_' + keyword +'_newjava_maxlen512_' + str(epoch_id), all_pre_label)
+    write_file('./output_dir/tdcheck_' + keyword +'_newjava_maxlen512_' + str(epoch_id), all_pre_label)
 
     # Calculate the average loss over all of the batches.
     avg_val_loss = total_eval_loss / len(testdata_loader)
@@ -131,4 +131,5 @@ if __name__ == '__main__':
     print(dir_path)
     for epoch_id in range(4,7):
         test_model(dir_path, epoch_id, 'todo')
+
 
