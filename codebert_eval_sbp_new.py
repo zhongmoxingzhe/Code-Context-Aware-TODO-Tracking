@@ -5,8 +5,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils import *
-#from BERT_model import TransformerModel1, Config
-from BERT_model import codeModel3, Config
+from BERT_model import TODO_Checker, Config
 from codebert_train_sbp_base import Data_processor
 from loss_func import Focal_loss, DiceLoss
 
@@ -103,7 +102,7 @@ def test_model(dir_path, epoch_id, keyword, language):
     cal_recall(all_pre_label, dir_path, keyword)
     cal_auc(prob_result, dir_path, keyword)
     cal_ce(prob_result, dir_path, keyword)
-    write_file(f'./output_dir/tdreminder_{keyword}_{language}_{epoch_id}', all_pre_label)
+    write_file(f'./output_dir/tdcheck_{keyword}_{language}_{epoch_id}', all_pre_label)
 
     avg_val_loss = total_eval_loss / len(testdata_loader)
     test_time = format_time(time.time() - t0)
@@ -125,5 +124,5 @@ if __name__ == '__main__':
     print(f"Selected language: {language}")
     print(f"Directory path: {dir_path}")
 
-    for epoch_id in range(3, 4):
+    for epoch_id in range(1, 6):
         test_model(dir_path, epoch_id, 'sbp', language)
